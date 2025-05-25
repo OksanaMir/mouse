@@ -1,0 +1,165 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* --------------------------------------- */
+/* header */
+/* --------------------------------------- */
+
+header {
+	width: 100%;
+	height: 15vh;
+	background-color: brown;
+	color: bisque;
+	padding: 15px 20px;
+}
+header a {
+	color: bisque;
+	text-decoration: none;
+	padding: 10px;
+}
+
+/* --------------------------------------- */
+/* sections */
+/* --------------------------------------- */
+section {
+	padding: 15px;
+}
+
+#transformation {
+	display: flex;
+	justify-content: space-around;
+}
+
+#animation {
+	background-color: rgb(122, 140, 162);
+}
+
+#sliding {
+	height: 400px;
+	background-color: burlywood;
+	position: relative;
+}
+
+/* --------------------------------------- */
+/* objects */
+/* --------------------------------------- */
+
+/* #1 transformation */
+
+.mouse {
+	width: calc(100% / 3 - 60px);
+	margin-top: 25px;
+}
+
+.mouse1:hover {
+	transform: scale();
+}
+
+.mouse2:hover {
+	transform: translate();
+}
+
+.mouse3:hover {
+	transform: rotate();
+	/* opacity: 15%; */
+}
+
+/* #2 transformation */
+
+.square1 {
+	width: 400px;
+	height: 400px;
+	background-color: blue;
+	margin: 35px;
+	/* animation-name: ; */
+	animation-duration: 2s;
+	animation-iteration-count: 1;
+}
+
+@keyframes exampleColor {
+	0% {
+		background-color: blue;
+		width: 400px;
+		height: 400px;
+	}
+	25% {
+		
+	}
+	50% {
+		
+	}
+	75% {
+		
+	}
+	100% {
+		/* background-color: green;
+		width: 160px;
+		height: 160px; */
+	}
+}
+
+.square2 {
+	margin: 50px auto;
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	opacity: 20%;
+}
+
+.square2:active {
+	transform-origin: 100% 100%;
+	transform: rotate(110deg);
+}
+.square3 {
+	margin: 50px auto;
+	width: 100px;
+	height: 100px;
+	background-color: lightpink;
+}
+.pink {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+}
+.square3:hover .pink {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+/* #3 transformation */
+.garage {
+	height: 200px;
+	width: 100%;
+	position: absolute;
+	bottom: 75px;
+	animation: moveAround 6s ease-in-out infinite;
+}
+@keyframes moveAround {
+	0% {
+		transform: translateX(100%);
+	}
+
+	50% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.car {
+	height: 200px;
+}

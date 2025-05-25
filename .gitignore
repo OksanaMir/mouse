@@ -1,0 +1,8 @@
+# Mac system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# OS generated files
+Thumbs.db
